@@ -40,3 +40,5 @@ local Window = Rayfield:CreateWindow({
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
     end,
  })
+
+--Update
