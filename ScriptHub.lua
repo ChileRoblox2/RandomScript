@@ -26,7 +26,7 @@ local Window = Rayfield:CreateWindow({
     }
  })
 
- local MainTab = Window:CreateTab("Home", 4483362458) -- Title, Image
+ local MainTab = Window:CreateTab("Universal", 4483362458) -- Title, Image
  local PlayerSection = MainTab:CreateSection("Player")
 
  local Slider = PlayerSection:CreateSlider({
