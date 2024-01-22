@@ -26,28 +26,17 @@ local Window = Rayfield:CreateWindow({
     }
  })
 
- local PlayerTab = Window:CreateTab("Player", 4483362458) -- Title, Image
+ local MainTab = Window:CreateTab("Home", 4483362458) -- Title, Image
+ local PlayerSection = MainTab:CreateSection("Player")
 
  local Slider = Tab:CreateSlider({
     Name = "Walkspeed",
-    Range = {10, 100},
+    Range = {1, 250},
     Increment = 1,
     Suffix = "Speed",
-    CurrentValue = 10,
+    CurrentValue = 16,
     Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
-    game.Players.LocalPlayer.Character:SetAttribute("SpeedMultiplier", Value)
-    end,
- })
-
- local Slider = Tab:CreateSlider({
-    Name = "Dash length",
-    Range = {10, 500},
-    Increment = 1,
-    Suffix = "Length",
-    CurrentValue = 10,
-    Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Value)
-    game.Players.LocalPlayer.Character:SetAttribute("DashLength", Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
     end,
  })
