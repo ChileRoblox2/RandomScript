@@ -29,7 +29,7 @@ local Window = Rayfield:CreateWindow({
  local MainTab = Window:CreateTab("Universal", 4483362458) -- Title, Image
  local PlayerSection = MainTab:CreateSection("Player")
 
- local Slider = PlayerSection:CreateSlider({
+ local Slider = MainTab:CreateSlider({
     Name = "Walkspeed",
     Range = {1, 250},
     Increment = 1,
